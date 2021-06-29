@@ -1,0 +1,14 @@
+{
+  "name": "csv-playground",
+  "version": "1.0.0",
+  "description": "For reading rows in CSV into objects, comparing objects in two CSV files, etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "csv"
+  ],
+  "author": "szewa-polyu",
+  "license": "ISC"
+}
