@@ -23,7 +23,9 @@ module.exports.readCsvIntoArrayAsync = async (
       }
 
       if (isSetKeyForRecords) {
-        records[fields[keyIdx]] = newRecord;
+        records[
+          fields[keyIdx] ? fields[keyIdx].toUpperCase() : fields[keyIdx]
+        ] = newRecord;
       } else {
         records.push(newRecord);
       }

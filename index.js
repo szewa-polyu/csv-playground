@@ -31,10 +31,10 @@ const startAsync = async _ => {
     }
   }
 
-  // console.log(Object.keys(records1).length);
-  // console.log(Object.keys(records2).length);
-  console.log(records2NotInRecords1);
+  console.log(Object.keys(records1).length);
+  console.log(Object.keys(records2).length);
   console.log(records2NotInRecords1.length);
+  //console.log(records2NotInRecords1);
 
   const outputRecords = [];
   for (let record2NotInRecords1Key of Object.keys(records2NotInRecords1)) {
