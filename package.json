@@ -4,7 +4,8 @@
   "description": "For reading rows in CSV into objects, comparing objects in two CSV files, etc.",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "node index.js",
+    "test": "node run start"
   },
   "keywords": [
     "csv"
