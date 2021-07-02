@@ -7,21 +7,21 @@ const {
 } = require('./utils/fileSystem/writeArrayIntoCsv');
 
 const startAsync = async _ => {
-  // file1 from SAM, keyIdx 3 is SAM No.
+  // file1 from SAM, keyIdx 3 is SAM No., 5 is Computer Name
   const { records: records1, headers: headers1 } = await readCsvIntoArrayAsync(
     config.inFile1,
-    3,
+    5, //3,
     true
   );
 
-  // file2 from CEIS, keyIdx 2 is SAM No.
+  // file2 from CEIS, keyIdx 2 is SAM No., 4 is Computer Name
   const { records: records2, headers: headers2 } = await readCsvIntoArrayAsync(
     config.inFile2,
-    2,
+    4, //2,
     true
   );
 
-  console.log('csv-playground completed.');
+  console.log('load csv completed.');
 
   // records2 not in records1
   const records2NotInRecords1 = [];
@@ -31,9 +31,11 @@ const startAsync = async _ => {
     }
   }
 
-  console.log(Object.keys(records1).length);
-  console.log(Object.keys(records2).length);
-  console.log(records2NotInRecords1.length);
+  console.log('records1 length: ' + Object.keys(records1).length);
+  //console.log(records1);
+  console.log('records2 length: ' + Object.keys(records2).length);
+  //console.log(records2);
+  console.log('records2NotInRecords1 length: ' + records2NotInRecords1.length);
   //console.log(records2NotInRecords1);
 
   const outputRecords = [];
