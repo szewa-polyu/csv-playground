@@ -62,7 +62,8 @@ const startAsync = async _ => {
     outputRecords.push(records2NotInRecords1[record2NotInRecords1Key]);
   }
 
-  writeArrayIntoCsvAsync('data/output.csv', outputRecords, headers2);
+  await writeArrayIntoCsvAsync('data/output.csv', outputRecords, headers2);
+  console.log('Writing to output.csv completed');
 };
 
 startAsync();
